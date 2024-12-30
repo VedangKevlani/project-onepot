@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to One Pot!</title>
+    <link rel="stylesheet" href="/styles/homestyles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+      <!-- Swiper JS -->
+   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+   <!-- JavaScript -->
+   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="plans.html">Plans</a></li>
+            <li class="zoom"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="plans.html">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <h2>Click and drag left or right to see all our menu options<br>or, use the arrow keys.</h2>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                           <img src="/assets/chiliimage.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Thinking of your next meal?</h2>
+                        <p class="description">Find out what other people are buying and cooking this week. This helps you save time, and stay on top of trending dishes.</p>
+                        <button onclick="navigateToHotPicks()" class="button">Go to Hot Picks</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                               <img src="/assets/deliveryguy.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Short on time?</h2>
+                        <p class="description">Follow our meal plans to cook savory dishes and save time deciding. Spend more time with the things you love.</p>
+                        <button class="button">Go to Plans</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                             <img src="/assets/melting-foods.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Join the Melting Pot community</h2>
+                        <p class="description">Meet people from your country, who are enjoying One Pot dishes. Same flavor, different chef.</p>
+                        <button class="button">Go to Melting Pot</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                                <img src="/assets/veggie-bow.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">See our Cookbook</h2>
+                        <p class="description">Enjoy homemade flavors preserved in our regional cookbook.</p>
+                        <button class="button">Go to Cookbook</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                           <img src="/assets/onepot.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Get in touch!</h2>
+                        <p class="description">Have a question? Have feedback? Contact us directly via our site or <a class="card-email" href="mailto:onepot.team@gmail.com">onepot.team@gmail.com</a></p>
+                        <button class="button">Go to Contact</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+    </div>
+    <script src="/javascript/homepage.js"></script>
+</body>
+</html>

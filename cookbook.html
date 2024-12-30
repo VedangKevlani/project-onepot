@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook</title>
+    <link rel="stylesheet" href="/styles/cookbookstyles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+    <script src="/javascript/jquery.js" defer></script>
+    <script src="/javascript/turn.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="plans.html">Plans</a></li>
+            <li class="zoom"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom"><a href="#">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="plans.html">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="#">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Flipbook -->
+        <div class="flipbook">
+            <div class="hard">One Pot Recipe Cookbook <small>~Team One Pot</small></div>
+            <div class="page">
+                <img src="/assets/one-potwelcome.png" alt="One Pot Welcome">
+                <div class="page-number">Page 1</div>
+            </div>
+            <div class="page">
+                <img src="/assets/basil-pasta.png" alt="Tomato Basil Pasta">
+                <small>Tomato Basil Pasta</small>
+                <div class="page-number">Page 2</div>
+            </div>
+            <div class="page">
+                <img src="/assets/stirfrypic.jpg" alt="Veg Stir Fry">
+                <small>Tropical Veg Stir Fry</small>
+                <div class="page-number">Page 3</div>
+            </div>
+            <div class="page">
+                <img src="/assets/trinidadian-lentilsoup.png" alt="Trinidadian Lentil Soup">
+                <small>Trinidadian Lentil Soup</small>
+                <div class="page-number">Page 4</div>
+            </div>
+            <div class="page">
+                <img src="/assets/onepotlogo.png" alt="more recipes coming soon">
+                <small>More recipes coming soon...</small>
+                <div class="page-number">Page 5</div>
+            </div>
+            <div class="hard">Thank you<small><br>~Team One Pot</small></div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="flipbook-controls">
+            <div class="button-stack">
+                <h3>Shortcuts and Controls</h3>
+                <button id="prevPage" class="btn">Previous Page</button>
+                <button id="nextPage" class="btn">Next Page</button>
+                <a href="#" class="btn popupWindow" id="link1">Recipe for Basil Pasta</a>        
+                <a href="#" class="btn popupWindow2" id="link2">Recipe for Vegetable Stir Fry</a>
+                <a href="#" class="btn popupWindow3" id="link3">Recipe for Trinidadian Lentil Soup</a>
+            </div>
+    </div>        
+    </div> 
+    <div id="popupWindow" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="popup-header-link">
+                    <img src="/assets/basil-pasta.png" alt="Recipe Icon" class="recipe-icon">
+                    <h1>Tomato Basil Pasta</h1>
+                </a>
+            </div>
+            <div class="popup-body">
+                <div class="popup-links">
+                    <ul>
+                        <li><a href="hotpicks.html">Click here to see cooking video (Hot Picks)</a></li>
+                        <li><a href="#">Click here to see reviews</a></li>
+                    </ul>
+                </div>
+                <div class="popup-video">
+                    <!-- Recipe Card Image with zoom functionality -->
+                    <img src="/assets/pastarecipecard.png" alt="Recipe Image" id="zoomImage" class="recipe-card-image">
+                </div>
+            </div>
+            <button id="closePopupBtn" class="close-popup-btn">Close</button>
+        </div>
+    </div>
+    <div id="popupWindow2" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="popup-header-link">
+                    <img src="/assets/basil-pasta.png" alt="Recipe Icon" class="recipe-icon">
+                    <h1>Tropical Veg Stir Fry</h1>
+                </a>
+            </div>
+            <div class="popup-body">
+                <div class="popup-links">
+                    <ul>
+                        <li><a href="hotpicks.html">Click here to see cooking video (Hot Picks)</a></li>
+                        <li><a href="#">Click here to see reviews</a></li>
+                    </ul>
+                </div>
+                <div class="popup-video">
+                    <!-- Recipe Card Image with zoom functionality -->
+                    <img src="/assets/stirfry.png" alt="Recipe Image" id="zoomImage2" class="recipe-card-image">
+                </div>
+            </div>
+            <button id="closePopupBtn2" class="close-popup-btn">Close</button>        
+        </div>
+    </div>
+    <!-- Zoomed Image Modal -->
+    <div id="zoomModal" class="zoom-modal" aria-label="Zoomed Image Modal">
+        <span class="zoom-close">&times;</span>
+        <img class="zoom-modal-content" id="zoomImg">
+    </div>    
+    <script src="/javascript/cookbook.js"></script>
+</body>
+</html>

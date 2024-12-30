@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melting Pot!</title>
+    <link rel="stylesheet" href="/styles/meltingpot.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="plans.html">Plans</a></li>
+            <li class="zoom"><a href="#">Melting Pot</a></li>
+            <li class="zoom"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="plans.html">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="#">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+     <!-- Page container for community selection -->
+     <div class="community-container">
+        <h1>Join Your Community</h1>
+        <button class="jamaican-btn community-btn" id="jamaican-btn">Join Jamaican Community</button>
+        <button class="bajan-btn community-btn" id="bajan-btn">Join Bajan Community</button>
+        <button class="trinidadian-btn community-btn" id="trinidadian-btn">Join Trinidadian and Tobagonian Community</button><br>
+        <button class="community-btn" id="jamaican-btn">Join Guyanese Community</button>
+        <button class="community-btn" id="bajan-btn">Join St Vincent Community</button>
+        <button class="community-btn" id="trinidadian-btn">Join Dominican Community</button>
+        <button class="community-btn" id="jamaican-btn">Join Bahamian Community</button><br>
+        <button class="community-btn" id="bajan-btn">Join Cayman Community</button>
+        <button class="community-btn" id="trinidadian-btn">Join St Lucian Community</button>
+        <button class="community-btn" id="jamaican-btn">Join Grenadian Community</button>
+        <button class="community-btn" id="bajan-btn">Join Antiguan and Barbudan Community</button><br>
+        <button class="community-btn" id="trinidadian-btn">Join St Kitts and Nevis Community</button>
+        <h3>What to do if your community chat is not working?</h3>
+    <ul>
+        <li>It is likely it is in downtime.</li>
+        <li>It has not been created yet.</li> 
+        <li>As more users register, more communities can be activated for the sharing of flavors, and spirit.</li>
+        <li>Please contact team OnePot in "Contact" for assistance or write an email at <a href="mailto:onepot.team@gmail.com">onepot.team@gmail.com</a>.</li>
+    </ul>
+    </div>
+    <div class="chat-container hidden" id="chat-container">
+        <h2 id="community-title">Jamaican Community Chat</h2>
+        <div class="chat-box" id="chat-box">
+            <!-- Sample messages will be added here dynamically -->
+             <p class="message">New messages will appear here...</p>
+        </div>
+    
+        <!-- Input area for typing messages -->
+        <div class="input-container">
+            <div class="textarea-container">
+                <textarea id="message-input" placeholder="Type a message..."></textarea>
+            </div>
+            <button id="send-message-btn">Send</button>
+        </div>
+    </div>
+    <script src="/javascript/meltingpot.js"></script>
+</body>
+</html>

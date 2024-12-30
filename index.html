@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to One Pot!</title>
+    <link rel="stylesheet" href="/styles/mainstyles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="plans.html">Plans</a></li>
+            <li class="zoom"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="plans.html">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="column">
+            <h2>From Homesick to Homemade, <br>Most importantly with Love</h2>
+            <img src="/assets/onepotlogo.png" alt="Logo">
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288-25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Get ingredients delivered right at your doorstep!</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288-25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> It is quick, easy, and takes less effort than buying groceries!</li>
+            </ul>
+              <!-- Navigation and Content -->
+            <div class="container">
+                <button data-form-type="getStarted">Create Account</button>
+                <button data-form-type="alreadyMember">Already a Member</button>
+            </div>
+        </div>
+        <div class="column"></div>
+    </div>
+    
+    <!-- Popup Form -->
+    <div class="form-popup" id="myForm" style="display: none;">
+        <form onsubmit="handleFormSubmit(event)" action="homepage.html" class="form-container" method="POST">
+            <div class="form-page active" id="formPage1">
+                <h1>Dear User</h1>
+                <h3>Please fill out the requested information to create your account.</h3>
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" placeholder="Enter Full Name" name="name" autocomplete="off" required>
+    
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" autocomplete="off" required>
+    
+                <label for="phone"><b>Enter your phone number (XXX-XXX-XXXX):</b></label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autocomplete="off" required>
+    
+                <label for="institution"><b>Institution or Organization</b></label>
+                <input type="text" placeholder="Enter Institution or Organization" name="institution" autocomplete="off" required>
+    
+                <label for="hall"><b>Hall of Residence (if any)</b></label>
+                <input type="text" placeholder="Enter Hall of Residence if any" name="hall" autocomplete="off">
+    
+                <button type="button" class="btn" onclick="nextPage(1)">Next</button>
+                <!-- Close button -->
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+            <div class="form-page" id="formPage2" style="display: none;">
+                <h3>Hang On. You are almost done!</h3>
+    
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Enter Password" name="psw" autocomplete="off" required>
+    
+                <label for="confirm-psw"><b>Confirm Password</b></label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" name="confirm-psw" autocomplete="off" required>
+    
+                <div id="password-error" style="color: red; display: none;">Passwords do not match!</div>
+    
+                <button type="button" class="btn" onclick="previousPage(2)">Back</button>
+                <button type="button" class="btn" onclick="handleFormSubmit(event)">Submit</button>
+                <!-- Close button -->
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
+
+ <!-- Form Popup for Login -->
+ <div class="form-popup" id="loginForm" style="display: none;">
+    <form class="form-container" action="homepage.html" onsubmit="handleLoginSubmit(event)" method="POST">
+        <h3>Login</h3>
+        <label for="email"><b>Email</b></label>
+        <input type="email" name="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" required>
+
+        <button type="button" class="btn" onclick="forgotPassword()">Forgot Password?</button>
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm('loginForm')">Close</button>
+    </form>
+</div>
+
+<!-- Form Popup for Password Reset -->
+<div class="form-popup" id="resetPasswordForm" style="display: none;">
+    <form class="form-container" onsubmit="handleResetPasswordSubmit(event)" method="POST">
+        <h3>Reset Your Password</h3>
+        <label for="resetEmail"><b>Email</b></label>
+        <input type="email" name="email" id="resetEmail" required>
+
+        <label for="newPassword"><b>New Password</b></label>
+        <input type="password" name="newPassword" id="newPassword" required>
+
+        <label for="confirmPassword"><b>Confirm Password</b></label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
+
+        <button type="submit" class="btn">Reset Password</button>
+        <button type="button" class="btn cancel" onclick="closeForm('resetPasswordForm')">Close</button>
+    </form>
+</div>
+
+    <script src="/javascript/mainpage.js"></script>
+</body>
+</html>

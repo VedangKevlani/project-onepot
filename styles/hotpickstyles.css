@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Navbar at the top */
+nav {
+    width: 100%; /* Stretch across the page */
+    background-color: #333; /* Example color for nav */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.chili, h1 {
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    color: #f4f4f4; 
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    font-size: 15px; 
+    font-weight: 500; 
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    color: #ffbd43; /* Accent color on hover */
+    background-color: rgba(255, 189, 67, 0.1); /* Soft highlight effect */
+    border-radius: 5px; 
+    padding: 0 25px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.zoom li:hover {
+    padding: 50px;
+    background-color: rgb(155, 104, 10);
+    transition: transform .2s; /* Animation */
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.sidebar a {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    text-transform: uppercase; /* Capitalize for a contemporary look */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffbd43;
+    text-shadow: 0px 2px 5px rgba(255, 189, 67, 0.5); /* Glow effect on hover */
+}
+
+.chili {
+    height: 50px;
+    width: auto;
+}
+
+body {
+    background-image: linear-gradient(135deg, #fca607, #93d84e);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+p {
+  padding: 10px;  
+}
+
+.container {
+    width: 1000px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Space between the cards */
+}
+
+.card, .med-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-one, .circle-two, .circle {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.5); /* Neuromorphic shadow */
+    margin-bottom: 20px; /* Space between circle and text */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light background for the circles */
+}
+
+.circle-one, .circle-two {
+    border: 5px solid #D1C4E9; /* Light border color for outer circle */
+}
+
+.circle img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h3, .med-card h3 {
+    font-size: 1.2rem;
+    color: #3a3737;
+    margin-bottom: 10px;
+}
+
+.card p, .med-card p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+}
+
+.card a, .med-card a {
+    color: #2d468b;
+    text-decoration: none;
+}
+
+.card img, .med-card img {
+    width: 100%; /* Ensure the image fills the circle */
+    height: 100%; /* Ensure the image fills the circle */
+    object-fit: cover;
+    border-radius: 50%; /* Ensures the image stays circular */
+}
+
+.card {
+    border-radius: 20%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2), -5px -5px 15px rgba(255,255,255,0.5);
+}
+
+.med-card {
+    border-radius: 20%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2), -5px -5px 15px rgba(255,255,255,0.5);
+    margin: 0 30px;
+}
+
+.dots-items {
+    width: 80px;
+    display: flex;
+    margin: 50px auto;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.button {
+    background: #3d5ebb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #FFF;
+    border: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #D1C4E9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-header img {
+    max-width: 120px; /* Set the size of the recipe icon */
+    height: 120px;
+    border-radius: 30%;
+}
+
+.popup-header h1 {
+    font-size: 24px; /* Customize the font size */
+    margin: 0; /* Remove default margin of h1 */
+}
+
+.popup-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popup-links li {
+    margin: 10px 0;
+}
+
+.close-popup-btn {
+    background: #ff5c5c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.popup-header img {
+    width: 100%;
+    display: flex;
+    border-radius: 50%;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.popup-header-link {
+    display: flex; /* Ensure both icon and title are inline */
+    align-items: center; /* Align icon and text vertically in the center */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep the text color as is */
+}
+
+.recipe-icon {
+    width: 40px; /* Adjust size of the icon */
+    height: 40px;
+    margin-right: 10px; /* Space between the icon and title */
+}
+
+.popup-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.popup-links {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    width: 30%;
+    padding-right: 20px;
+}
+
+.popup-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.popup-links a:hover {
+    text-decoration: underline;
+}
+
+.popup-video {
+    width: 60%;
+}
+
+.popup-video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+}
+
+.close-popup-btn:hover {
+    background-color: #e03a3a;
+}
+

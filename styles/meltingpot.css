@@ -1,0 +1,259 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, #fca607, #93d84e);
+}
+
+/* Navbar at the top */
+nav {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0; /* Reduced padding on top and bottom */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 100px; /* Set a fixed height for the navbar */
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Space out the left and right items */
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Style for Project One Pot to stay on the left */
+nav li:first-child {
+    margin-right: auto; /* Aligns the first item (Project One Pot) to the left */
+}
+
+/* Style for the other nav items */
+nav li:not(:first-child) {
+    margin-left: auto; /* Pushes the rest to the right */
+}
+
+nav a:hover {
+    color: #ffbd43;
+    background-color: rgba(255, 189, 67, 0.1);
+    border-radius: 5px;
+    padding: 0 25px;
+}
+
+.zoom li:hover {
+    padding: 50px;
+    background-color: rgb(155, 104, 10);
+    transition: transform .2s; /* Animation */
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  /* Optional: For smaller screens, you can adjust the padding and font size */
+@media (max-width: 768px) {
+    nav a {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+}
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.sidebar a {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    text-transform: uppercase; /* Capitalize for a contemporary look */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+    transition: color 0.3s ease;
+}
+
+.chili {
+    height: 50px;
+    width: auto;
+}
+
+/* Container for community buttons */
+.community-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.community-btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.community-btn:hover {
+    background-color: #45a049;
+}
+
+/* Modernized styles for the chat container */
+.chat-container {
+    display: flex;
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container.hidden {
+    display: none;
+}
+
+/* Styles for the chat box */
+.chat-box {
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+/* Modern input field style */
+textarea {
+    width: 100%;
+    height: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    resize: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for the input field */
+textarea:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Send message button */
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the send button */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Disabled state for the send button */
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.community-container h3, ul, li {
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Modern message appearance */
+.message {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background-color: #e1f5fe;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Styling for the input area and button container */
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Adding some margin to the textarea for better spacing */
+.textarea-container {
+    flex-grow: 1;
+}
+
+/* Container holding both textarea and button */
+.input-container button {
+    margin-left: 10px;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Pot Plans</title>
+    <link rel="stylesheet" href="/styles/planstyles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="#">Plans</a></li>
+            <li class="zoom"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="hotpicks.html">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="#">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Column 1 -->
+        <div class="column">
+            <h2>Breakfast Plans</h2>
+            <img src="assets/dumpling.jpg" alt="Image 1">
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Ingredients included</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Comes with brochure</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Cook up to 10 kinds of meals</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Cannot request extra storage container</li>
+            </ul><br>
+            <a href="#" class="purchaseButton" data-target="popupWindowBreakfast">Purchase Breakfast Box</a>        
+        </div>
+        <!-- Column 2 -->
+        <div class="column">
+            <h2>Lunch Plans</h2>
+            <img src="assets/veggie-lunch.jpg" alt="Image 2">
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Ingredients included</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Comes with brochure</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Cook up to 20 kinds of meals</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Able to request extra storage container</li>
+            </ul><br>
+            <a href="#" class="purchaseButton" data-target="popupWindowLunch">Purchase Lunch Box</a>        
+        </div>
+        <!-- Column 3 -->
+        <div class="column">
+            <h2>Dinner Plans</h2>
+            <img src="assets/veggie-dinner.jpg" alt="Image 3">
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Ingredients included</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Comes with brochure</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Cook up to 30 kinds of meals</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg> Able to request extra storage container</li>
+            </ul><br>
+            <a href="#" class="purchaseButton" data-target="popupWindowDinner">Purchase Dinner Box</a>        
+        </div>
+    </div>
+    <!-- Popup window -->
+    <div id="popupWindow" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button id="closePopupBtn" class="close-popup-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-container">
+                    <!-- Left Column: Package Info -->
+                    <div class="popup-column left-column">
+                        <h2>Breakfast Plans</h2>
+                        <img src="/assets/dumpling.jpg" alt="Product Image" class="product-image">
+                        <ul>
+                            <li>Ingredients included</li>
+                            <li>Comes with brochure</li>
+                            <li>Cook up to 10 kinds of meals</li>
+                            <li>Cannot request extra storage container</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Right Column: Order Form -->
+                    <div class="popup-column right-column">
+                        <h3>Order Details</h3>
+                        <form id="purchaseForm">
+                            <label for="datePicker">Delivery Date:</label>
+                            <input type="text" id="datePicker" name="deliveryDate" placeholder="Select a date" autocomplete="off" required>
+    
+                            <label for="customerName">Customer Name:</label>
+                            <input type="text" id="customerName" name="customerName" placeholder="Your Name" autocomplete="off" required>
+    
+                            <label for="specialNotes">Special Notes or Considerations:</label>
+                            <textarea id="specialNotes" name="specialNotes" placeholder="Any special requests or considerations..." autocomplete="off"></textarea>
+    
+                            <label for="address">Delivery Address and Instructions:</label>
+                            <textarea id="address" name="address" placeholder="Your delivery address and instructions (bring change, ring at destination, etc.)" autocomplete="off"  required></textarea>
+    
+                            <div class="checkbox">
+                                <input type="checkbox" id="environmentCare" name="environmentCare">
+                                <label for="environmentCare">By ticking this checkbox, I pledge to practice proper care with cooking and handling waste, and will dispose waste appropriately for a safer environment for everyone.</label>
+                            </div>
+    
+                            <button class="submit-order" type="submit">Submit Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Popup window -->
+     <div id="popupWindow2" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button id="closePopupBtn2" class="close-popup-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-container">
+                    <!-- Left Column: Package Info -->
+                    <div class="popup-column left-column">
+                        <h2>Lunch Plans</h2>
+                        <img src="/assets/veggie-lunch.jpg" alt="Product Image" class="product-image">
+                        <ul>
+                            <li>Ingredients included</li>
+                            <li>Comes with brochure</li>
+                            <li>Cook up to 20 kinds of meals</li>
+                            <li>Able request extra storage container</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Right Column: Order Form -->
+                    <div class="popup-column right-column">
+                        <h3>Order Details</h3>
+                        <form id="purchaseForm">
+                            <label for="datePicker">Delivery Date:</label>
+                            <input type="text" id="datePicker" name="deliveryDate" placeholder="Select a date" autocomplete="off" required>
+    
+                            <label for="customerName">Customer Name:</label>
+                            <input type="text" id="customerName" name="customerName" placeholder="Your Name" autocomplete="off" required>
+    
+                            <label for="specialNotes">Special Notes or Considerations:</label>
+                            <textarea id="specialNotes" name="specialNotes" placeholder="Any special requests or considerations..." autocomplete="off"></textarea>
+    
+                            <label for="address">Delivery Address and Instructions:</label>
+                            <textarea id="address" name="address" placeholder="Your delivery address and instructions (bring change, ring at destination, etc.)" autocomplete="off" required></textarea>
+    
+                            <div class="checkbox">
+                                <input type="checkbox" id="environmentCare" name="environmentCare">
+                                <label for="environmentCare">By ticking this checkbox, I pledge to practice proper care with cooking and handling waste, and will dispose waste appropriately for a safer environment for everyone.</label>
+                            </div>
+    
+                            <button class="submit-order" type="submit">Submit Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup window -->
+    <div id="popupWindow3" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <button id="closePopupBtn3" class="close-popup-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-container">
+                    <!-- Left Column: Package Info -->
+                    <div class="popup-column left-column">
+                        <h2>Dinner Plans</h2>
+                        <img src="/assets/veggie-dinner.jpg" alt="Product Image" class="product-image">
+                        <ul>
+                            <li>Ingredients included</li>
+                            <li>Comes with brochure</li>
+                            <li>Cook up to 30 kinds of meals</li>
+                            <li>Able request extra storage container</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column: Order Form -->
+                    <div class="popup-column right-column">
+                        <h3>Order Details</h3>
+                        <form id="purchaseForm">
+                            <label for="datePicker">Delivery Date:</label>
+                            <input type="text" id="datePicker" name="deliveryDate" placeholder="Select a date" autocomplete="off" required>
+
+                            <label for="customerName">Customer Name:</label>
+                            <input type="text" id="customerName" name="customerName" placeholder="Your Name" autocomplete="off" required>
+
+                            <label for="specialNotes">Special Notes or Considerations:</label>
+                            <textarea id="specialNotes" name="specialNotes" placeholder="Any special requests or considerations..." autocomplete="off"></textarea>
+
+                            <label for="address">Delivery Address and Instructions:</label>
+                            <textarea id="address" name="address" placeholder="Your delivery address and instructions (bring change, ring at destination, etc.)" autocomplete="off" required></textarea>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="environmentCare" name="environmentCare">
+                                <label for="environmentCare">By ticking this checkbox, I pledge to practice proper care with cooking and handling waste, and will dispose waste appropriately for a safer environment for everyone.</label>
+                            </div>
+
+                            <button class="submit-order" type="submit">Submit Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Popup -->
+    <div class="success-popup" style="display: none;">
+        <div class="popup-content">
+        <p>SUCCESS! Your order has been sent to our team. You will be notified by phone or email as your package becomes ready.</p>
+        <p>If you have any complaints, or urgency, please leave a review through Contact.</p>
+        <button class="close-btn">Close</button>
+        </div>
+    </div>
+    <script src="/javascript/plans.js"></script>
+</body>
+</html>

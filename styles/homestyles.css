@@ -1,0 +1,313 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: auto;
+    background-image: linear-gradient(135deg, #fca607, #93d84e);
+}
+
+/* Navbar at the top */
+nav {
+    width: 100%; /* Stretch across the page */
+    background-color: #333; /* Example color for nav */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    color: #f4f4f4; 
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    font-size: 15px; 
+    font-weight: 500; 
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    color: #ffbd43; /* Accent color on hover */
+    background-color: rgba(255, 189, 67, 0.1); /* Soft highlight effect */
+    border-radius: 5px; 
+    padding: 0 25px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.zoom li:hover {
+    padding: 50px;
+    background-color: rgb(155, 104, 10);
+    transition: transform .2s; /* Animation */
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.sidebar a {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    text-transform: uppercase; /* Capitalize for a contemporary look */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffbd43;
+    text-shadow: 0px 2px 5px rgba(255, 189, 67, 0.5); /* Glow effect on hover */
+}
+
+.chili {
+    height: 50px;
+    width: auto;
+}
+
+.chili-slider {
+    height: 30px;
+    width: auto;
+}
+
+
+.slide-container {
+    max-width: 1200px; /* Increase width for more spacing */
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.card {
+    height: 400px; /* Adjust card height */
+    width: 300px; /* Equal width for all cards */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: grey; /* Fallback background */
+    color: #fff; /* Set default text color for visibility */
+    transform: scale(0.8); /* Shrink the card initially */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-email {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* Make image cover the entire card */
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensure image is beneath text */
+    transition: transform 0.3s ease;
+}
+
+
+.image-content {
+    height: auto; /* Increase image area height */
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: honeydew;
+}
+
+.card-content {
+    position: relative; /* Allow content to overlay the image */
+    z-index: 2; /* Place content above the image */
+    height: 100%; /* Full height to align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    text-align: center;
+}
+
+.card:hover .card-content {
+    display: flex; /* Display the content on hover */
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect on hover */
+    transform: translateY(-5px); /* Optional: Slightly lift the card on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image {
+    height: 70%; /* Image takes 70% of the card height */
+    width: 100%; /* Full width */
+    background-size: cover; /* Maintain aspect ratio */
+    background-position: center; /* Center the image */
+    transition: transform 0.3s ease;
+}
+  
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1); /* Zoom image on hover */
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.description {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.button {
+    background: #6E93f7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #FFF;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #265DF2;
+}
+  
+.swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover{
+    color: #4070F4;
+}
+  
+.swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+}
+  
+.swiper-button-next{
+    right: 0;
+}
+
+.swiper-button-prev{
+    left: 0;
+}
+
+.swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #4070F4;
+}
+
+h2 {
+    margin: 10px;
+    text-align: center;
+}
+  
+@media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+}

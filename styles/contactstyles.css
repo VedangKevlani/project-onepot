@@ -1,0 +1,219 @@
+ /* Google Fonts - Poppins */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body {
+     min-height: 100vh;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     overflow: hidden;
+     background-image: linear-gradient(135deg, #fca607, #93d84e);
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+ }
+ 
+ /* Navbar at the top */
+ nav {
+     width: 100%; /* Stretch across the page */
+     background-color: #333; /* Example color for nav */
+     color: #fff;
+     padding: 10px 0;
+     position: sticky; /* Keep it at the top */
+     top: 0;
+     z-index: 10;
+ }
+ 
+ nav ul {
+     width: 100%;
+     list-style: none;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+ }
+ 
+ nav li {
+     height: 50px;
+ }
+ 
+ nav a {
+     height: 100%;
+     padding: 0 20px; 
+     text-decoration: none; 
+     display: flex;
+     align-items: center;
+     color: #f4f4f4; 
+     font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+     font-size: 15px; 
+     font-weight: 500; 
+     transition: all 0.3s ease; 
+ }
+ 
+ nav a:hover {
+     color: #ffbd43; /* Accent color on hover */
+     background-color: rgba(255, 189, 67, 0.1); /* Soft highlight effect */
+     border-radius: 5px; 
+     padding: 0 25px;
+ }
+ 
+ nav li:first-child {
+     margin-right: auto;
+ }
+ 
+ .zoom li:hover {
+     padding: 50px;
+     background-color: rgb(155, 104, 10);
+     transition: transform .2s; /* Animation */
+     width: auto;
+     height: 40px;
+     margin: 0 auto;
+   }
+   
+   .zoom:hover {
+     transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+   }
+ 
+ .sidebar {
+     position: fixed;
+     top: 0;
+     right: 0;
+     height: 100vh;
+     width: 250px;
+     z-index: 999;
+     background-color: black;
+     backdrop-filter: blur(10px);
+     box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+     display: none;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;
+ }
+ 
+ .sidebar li {
+     padding: 15px 20px; /* Add padding for better spacing */
+ }
+ 
+ .sidebar a {
+     font-family: 'Poppins', Arial, sans-serif;
+     font-size: 14px;
+     font-weight: 500;
+     color: #e8eaed;
+     text-transform: uppercase; /* Capitalize for a contemporary look */
+     letter-spacing: 0.5px; /* Add spacing between letters */
+     transition: color 0.3s ease;
+ }
+ 
+ .sidebar a:hover {
+     color: #ffbd43;
+     text-shadow: 0px 2px 5px rgba(255, 189, 67, 0.5); /* Glow effect on hover */
+ }
+ 
+ .chili {
+     height: 50px;
+     width: auto;
+ }
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff7f7;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 15px auto;
+}
+
+/* Left column (form) styles */
+.form-column {
+    width: 60%;
+    padding-right: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+small {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Right column (logo) styles */
+.logo-column {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-column,
+    .logo-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .logo-column {
+        display: block;
+    }
+}

@@ -1,0 +1,372 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, #fca607, #93d84e);
+}
+
+/* Navbar at the top */
+nav {
+    width: 100%; /* Stretch across the page */
+    background-color: #333; /* Example color for nav */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    color: #f4f4f4; 
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    font-size: 15px; 
+    font-weight: 500; 
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    color: #ffbd43; /* Accent color on hover */
+    background-color: rgba(255, 189, 67, 0.1); /* Soft highlight effect */
+    border-radius: 5px; 
+    padding: 0 25px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.zoom li:hover {
+    padding: 50px;
+    background-color: rgb(155, 104, 10);
+    transition: transform .2s; /* Animation */
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.sidebar a {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    text-transform: uppercase; /* Capitalize for a contemporary look */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+    transition: color 0.3s ease;
+}
+
+.chili {
+    height: 50px;
+    width: auto;
+}
+
+
+/* Container for the three columns */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Each column */
+.column {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+/* Title */
+.column h2 {
+    margin: auto;
+    width: 80%;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Image */
+.column img {
+    width: 100%; /* Ensure images are responsive */
+    height: 300px; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Bullet points */
+.column ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.column ul li {
+    font-size: 16px;
+    color: #555;
+    list-style-type: none;
+}
+
+.column svg {
+    background-color: rgb(182, 136, 11);
+    border-radius: 5px;
+}
+
+.column a {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c0392b;
+    color: #fff;
+    text-decoration: none;
+}
+
+.column a:hover {
+    padding: 10px;
+    border-radius: 5px;
+    background-color:#7c231b;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    z-index: 9999; /* Make sure it's on top of other content */
+}
+
+/* Popup Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 80%; /* Adjust size */
+    max-width: 900px; /* Maximum width */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative; /* Ensure the close button is positioned relative to this */
+}
+
+.popup-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.popup-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.popup-column {
+    width: 48%; /* Adjust to make both columns fit within the container */
+}
+
+.left-column {
+    padding: 20px;
+}
+
+.right-column {
+    padding: 20px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Flex container to hold both left and right columns */
+.popup-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.popup-column {
+    width: 48%; /* Adjust to make both columns fit within the container */
+}
+
+.close-popup-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.popupWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 999;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popupContent {
+    position: relative;
+}
+
+.popup-overlay.hidden {
+    display: none;
+}
+
+.product-image {
+    width: 100%; /* Adjust according to your image size */
+    height: auto;
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-popup-btn {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Button Style */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.success-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional, for dimming the background */
+    z-index: 1000;
+  }
+
+  .close-btn {
+    background-color: #f44336; /* Red color for Close button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

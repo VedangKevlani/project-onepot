@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Navbar at the top */
+nav {
+    width: 100%; /* Stretch across the page */
+    background-color: #333; /* Example color for nav */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky; /* Keep it at the top */
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px; 
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    color: #f4f4f4; 
+    font-family: 'Poppins', Arial, sans-serif; /* Modern font */
+    font-size: 15px; 
+    font-weight: 500; 
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    color: #ffbd43; /* Accent color on hover */
+    background-color: rgba(255, 189, 67, 0.1); /* Soft highlight effect */
+    border-radius: 5px; 
+    padding: 0 25px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.zoom li:hover {
+    padding: 50px;
+    background-color: rgb(155, 104, 10);
+    transition: transform .2s; /* Animation */
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(36, 36, 36, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.sidebar a {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    text-transform: uppercase; /* Capitalize for a contemporary look */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffbd43;
+    text-shadow: 0px 2px 5px rgba(255, 189, 67, 0.5); /* Glow effect on hover */
+}
+
+.chili {
+    height: 50px;
+    width: auto;
+}
+
+.row {
+    display: flex; /* Use flexbox for equal column layout */
+    height: calc(100vh - 50px); /* Adjust height to fill viewport minus nav height */
+}
+
+.column:first-child {
+    flex: 1;
+    flex-basis: 0;
+    background-color:#fdd273;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #ddd; 
+}
+
+.column:first-child h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333; /* Dark gray for readability */
+    margin-bottom: 20px; 
+}
+
+.column:first-child ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.column:first-child li {
+    font-family: 'Poppins', Arial, sans-serif;
+    padding: 5px;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: 400;
+    color: #2c2c2c; /* Medium gray for subtlety */
+    margin-bottom: 10px;
+    line-height: 1.5; /* Improve readability with line spacing */
+}
+
+.column:first-child svg {
+    background-color: rgb(182, 136, 11);
+    border-radius: 5px;
+}
+
+.column img {
+    height: 250px;
+    width: auto;
+}
+
+.column:first-child li a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.column:last-child {
+    flex: 1.5; /* Second column takes 1.5 parts of the available space */
+    background-image: url("/assets/chow-curry.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h2 {
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+  
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+button {
+    margin: 10px; /* Increased spacing for better layout */
+    padding: 12px 20px; 
+    border-radius: 8px; 
+    border: none; 
+    background: linear-gradient(135deg, #dfa301, #f70202); /* Gradient background */
+    font-family: 'Segoe UI', Roboto, 'Open Sans', Arial, sans-serif; /* Modern font stack */
+    font-size: 16px; 
+    color: white; 
+    font-weight: 600; 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c99301, #d60000); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.form-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the popup */
+    width: 80%; /* Adjust this width as needed */
+    max-width: 500px; /* Maximum width */
+    padding: 20px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* For close button inside the popup */
+.form-popup button.cancel {
+    margin-top: 10px;
+}
+
+/* Optional: Background overlay for the popup */
+.form-popup:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places the overlay behind the popup */
+}
+
+/* Make each input, label, and button block-level elements for line breaks */
+.form-container label,
+.form-container input,
+.form-container button {
+    display: block;
+    width: 100%; /* Makes sure the form elements take full width */
+    margin-bottom: 10px; /* Adds space between form elements */
+}
+
+/* Form container styling */
+.form-container {
+    background-color: rgb(185, 153, 8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Align text to the left for better form structure */
+    position: relative;
+    z-index: 10000; /* Ensure form content stays above the background */
+}
+
+/* Style the inputs */
+.form-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 450px;
+}
+
+/* Style the submit and other buttons */
+.form-container .btn {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px;
+    gap: 10px;
+    border: none;
+    margin: auto;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-container .btn:hover {
+    background-color: #6a11cb;
+}
+
+.form-container .cancel {
+    background-color: #f81414;
+}
+
+/* Password error styling */
+#password-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Form page visibility control */
+.form-page {
+    display: none;
+}
+
+.form-page.active {
+    display: block; /* Show the active form page */
+}
+
+/* Background blur effect on columns only */
+.blur-background {
+    filter: blur(5px); /* Apply blur */
+    pointer-events: none; /* Disable interaction with the blurred content */
+}
+
+h3, h1 {
+    font-family: 'Poppins', Arial, sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .column {
+        width: 100%;
+      }
+}

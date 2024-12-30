@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Picks!</title>
+    <link rel="stylesheet" href="/styles/hotpickstyles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/onepotlogo.png">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#">Click X to Close<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="zoom"><a href="#">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom"><a href="plans.html">Plans</a></li>
+            <li class="zoom"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom"><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="zoom hideOnMobile"><a href="index.html">Project One Pot Jamaica</a></li>
+            <li class="zoom hideOnMobile"><a href="#">Hot Picks<img class="chili" src="/assets/redchili.png"></a></li>
+            <li class="zoom hideOnMobile"><a href="plans.html">Plans</a></li>
+            <li class="zoom hideOnMobile"><a href="meltingpot.html">Melting Pot</a></li>
+            <li class="zoom hideOnMobile"><a href="cookbook.html">Cookbook</a></li>
+            <li class="zoom hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="zoom" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <h1>Hot Picks <img class="chili" src="/assets/redchili.png"></h1>
+    <div class="container">
+        <div class="card">
+            <div class="circle-one">
+                <img src="/assets/trinidadian-lentilsoup.png" alt="Trinidadian Lentil Soup">
+            </div>
+            <h3>Trinidadian Lentil Soup</h3>
+            <p>Enjoy the thick Trinidadian Lentil soup for any occasion, sickness, or meal!<br>
+                <strong>Click <a class="popupWindow3" href="#">here</a> to view in cookbook!</strong>
+            </p>
+        </div>
+    
+        <div class="med-card">
+            <div class="circle">
+                <img src="/assets/basil-pasta.png" alt="Tomato Basil Pasta">
+            </div>
+            <h3>Jamaican Basil Pasta</h3>
+            <p>Taste the Tangy Tomato Basil Pasta that will give your taste buds aromatic healing!<br>
+                <strong>Click <a class="popupWindow" href="#">here</a> to view in cookbook!</strong>
+            </p>
+        </div>
+    
+        <div class="card">
+            <div class="circle-two">
+                <img src="/assets/stirfrypic.jpg" alt="Tropical Veg Stir Fry">
+            </div>
+            <h3>Tropical Veg Stir Fry</h3>
+            <p>Relish the rich tropical vegetable stir fry that will have you taking second serves!<br>
+                <strong>Click <a class="popupWindow2" href="#">here</a> to view in cookbook!</strong>
+            </p>
+        </div>
+    </div>
+    <div id="popupWindow" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="popup-header-link">
+                    <img src="/assets/basil-pasta.png" alt="Recipe Icon" class="recipe-icon">
+                    <h1>Tomato Basil Pasta</h1> <!-- This is the header you want to be in the same line -->
+                </a>
+            </div>
+            <div class="popup-body">
+                <div class="popup-links">
+                    <ul>
+                        <li><a href="#">Click here to get recipe</a></li>
+                        <li><a href="#">Click here to see reviews</a></li>
+                    </ul>
+                </div>
+                <div class="popup-video">
+                    <!-- Embed YouTube Video -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TkZw8mK5FrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="closePopupBtn" class="close-popup-btn">Close</button>
+        </div>
+    </div>
+    <div id="popupWindow2" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="popup-header-link">
+                    <img src="/assets/stirfrypic.png" class="recipe-icon">
+                    <h1>Tropical Veg Stir Fry</h1> <!-- This is the header you want to be in the same line -->
+                </a>
+            </div>
+            <div class="popup-body">
+                <div class="popup-links">
+                    <ul>
+                        <li><a href="#">Click here to get recipe</a></li>
+                        <li><a href="#">Click here to see reviews</a></li>
+                    </ul>
+                </div>
+                <div class="popup-video">
+                    <!-- Embed YouTube Video -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/So0-lEXpEEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="closePopupBtn2" class="close-popup-btn">Close</button>
+        </div>
+    </div>
+    <div id="popupWindow3" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <a href="#" class="popup-header-link">
+                    <img src="/assets/barbadospelau.png" alt="Recipe Icon" class="recipe-icon">
+                    <h1>Trinidadian Lentil Soup</h1> <!-- This is the header you want to be in the same line -->
+                </a>
+            </div>
+            <div class="popup-body">
+                <div class="popup-links">
+                    <ul>
+                        <li><a href="#">Click here to get recipe</a></li>
+                        <li><a href="#">Click here to see reviews</a></li>
+                    </ul>
+                </div>
+                <div class="popup-video">
+                    <!-- Embed YouTube Video -->
+                     <h4>This video has meat, but you can choose to avoid adding meat. Our products state that One Pot ingredients are strictly vegetarian.</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z87u0V-yFMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="closePopupBtn3" class="close-popup-btn">Close</button>
+        </div>
+    </div>
+    <script src="/javascript/hotpicks.js"></script>
+</body>
+</html>
