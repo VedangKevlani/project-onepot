@@ -80,7 +80,7 @@ function sendResetCodeToEmail(email, code) {
 // Call this function to handle form submission for Create Account
 function handleFormSubmit(event) {
     event.preventDefault();
-    
+    window.location.href='homepage.html';
     const formData = new FormData(document.querySelector('form'));
     
     fetch('/userinfo.php', {
